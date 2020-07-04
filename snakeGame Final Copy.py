@@ -4,7 +4,6 @@
 
 import random 
 import pygame                              #install pygame by typing pip install pygame into the console
-import time
 
 pygame.init()   #initialize the pygame window
 
@@ -29,7 +28,7 @@ bright_red = (255, 0 , 0)
 bright_green = (0, 255, 0)
 
 def initializeGame():
-    pygame.init()
+    #pygame.init()
     
     ##gameIcon = pygame.image.load("carIcon.png")
     ##pygame.display.set_icon(gameIcon)
@@ -158,7 +157,7 @@ def moveImage():
     # size of array
     score = 4
     
-    ## head of snake
+    # head of snake
     x = imgX
     y = imgY
     
@@ -212,13 +211,13 @@ def moveImage():
         
         previous = snakeArray[-1]
         
-        # update snake but the head
+        # update snake but not the head
         for i in range(len(snakeArray) - 1, 0, -1):
             snakeArray[i] = snakeArray[i-1]
         # update snake head
         snakeArray[0] = [x, y]
         
-        # check to see if snake eated the apple
+        # check to see if snake ate the apple
         if x == appleArray[0] and y == appleArray[1]:
             # increase the score
             score += 1
