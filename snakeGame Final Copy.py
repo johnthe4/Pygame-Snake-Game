@@ -30,8 +30,6 @@ bright_green = (0, 255, 0)
 def initializeGame():
     #pygame.init()
     
-    ##gameIcon = pygame.image.load("carIcon.png")
-    ##pygame.display.set_icon(gameIcon)
     pygame.display.set_caption("Snake Game")
     
     global gameDisplay
